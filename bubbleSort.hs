@@ -1,5 +1,5 @@
 ----------------
--- バブルソート
+-- bubble sort
 ----------------
 bubblesort :: (Ord a) => [a] -> [a]
 bubblesort [] = []
@@ -11,5 +11,5 @@ bubblesort xs = y : bubblesort ys
       | x < y     = y : swp (x:zs)
       | otherwise = x : swp (y:zs)
 
-    -- 右端へ寄せたらひっくり返して先頭とそれ以外を束縛
+    -- 右端へ寄せてひっくり返し先頭とそれ以外を束縛
     (y:ys) = reverse $ swp xs
